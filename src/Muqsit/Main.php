@@ -30,8 +30,8 @@ class Main extends PluginBase implements Listener{
 	   if($event->isCancelled()) return;
 	   $name = $event->getPlayer()->getName();
 	   $player = $event->getPlayer();
-	      if(self::$breaks[$name] >= 128){
-	         $event->getPlayer()->sendMessage(TF::YELLOW . "You broke 128 blocks, " . TF::AQUA . "WHOOOO!");
+	      if(self::$breaks[$name] >= 10){
+	         $event->getPlayer()->sendMessage(TF::YELLOW . "You broke 10 blocks, " . TF::AQUA . "WHOOOO!");
 	         self::giveEffect($player, 3, 100, 5);
 	         self::$breaks[$name] = 0; # Reset the counter, to avoid ^^ spam.
 	      }else{
